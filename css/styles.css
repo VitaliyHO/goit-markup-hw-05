@@ -41,7 +41,7 @@ img {
     display: block;
 }
 
-/*Стилі хедера*/
+/*! Стилі хедера*/
 
 .container {
     width: 1200px;
@@ -192,7 +192,7 @@ img {
     background-image: url(href="./image/icons/symbol-defs.svg#envelope");
 }
 
-/*Стилі головної сторінки */
+/*! Стилі головної сторінки */
 
 .hero {
     padding-top: 200px;
@@ -319,6 +319,8 @@ img {
 
 .image-container {
     position: relative;
+    overflow: hidden;
+    pointer-events: none;
 }
 
 .work-description {
@@ -438,7 +440,7 @@ img {
     fill: currentColor;
 }
 
-/* Стилі футера */
+/*! Стилі футера */
 
 .footer {
     background-color: var(--footer-background-color);
@@ -537,7 +539,7 @@ img {
     fill: currentColor;
 }
 
-/* Стилі сторінки Portfolio */
+/*! Стилі сторінки Portfolio */
 .filter-list {
     margin-bottom: 50px;
 }
@@ -599,7 +601,36 @@ img {
 .project-item:hover,
 .project-item:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 295px;
+    left: 0;
+
+
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 60px;
+    background-color: rgba(33, 150, 243, 0.9);
+
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.overlay-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    color: var(--white);
+}
+
+.project-item:hover .overlay {
+    transform: translatey(-295px);
 }
 
 .project-description {
