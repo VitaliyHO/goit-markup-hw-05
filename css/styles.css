@@ -473,6 +473,10 @@ img {
     border-radius: 4px;
 
     color: var(--icon-fill);
+
+    transition-property: color, background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-item:not(:last-child) {
