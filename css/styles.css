@@ -44,7 +44,8 @@ img {
 /*! Стилі хедера*/
 
 .container {
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     padding-right: 15px;
     padding-left: 15px;
@@ -276,6 +277,24 @@ img {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     background-color: var(--white);
+
+    animation-name: scale;
+    animation-duration: 2000ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes scale {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .modal-button {
